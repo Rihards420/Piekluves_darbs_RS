@@ -15,6 +15,7 @@ namespace Projekta_darbs_Rihards_frizetava
         public Registresanas()
         {
             InitializeComponent();
+            this.StartPosition = FormStartPosition.CenterScreen;
         }
 
         private void Registresanas_Load(object sender, EventArgs e)
