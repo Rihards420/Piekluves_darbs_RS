@@ -30,13 +30,14 @@
         {
             this.label1 = new System.Windows.Forms.Label();
             this.Pierakstisanas_e_pasts = new System.Windows.Forms.MaskedTextBox();
-            this.Pierakstisanas_parole = new System.Windows.Forms.TextBox();
             this.Pierakstisanas_poga = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.Registresanas_parvietosana = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
             this.Radit_tekstu = new System.Windows.Forms.Button();
+            this.label5 = new System.Windows.Forms.Label();
+            this.pierakstisanas_parole = new System.Windows.Forms.MaskedTextBox();
             this.SuspendLayout();
             // 
             // label1
@@ -55,26 +56,18 @@
             this.Pierakstisanas_e_pasts.Size = new System.Drawing.Size(155, 20);
             this.Pierakstisanas_e_pasts.TabIndex = 7;
             // 
-            // Pierakstisanas_parole
-            // 
-            this.Pierakstisanas_parole.Location = new System.Drawing.Point(83, 206);
-            this.Pierakstisanas_parole.Name = "Pierakstisanas_parole";
-            this.Pierakstisanas_parole.Size = new System.Drawing.Size(155, 20);
-            this.Pierakstisanas_parole.TabIndex = 6;
-            this.Pierakstisanas_parole.UseSystemPasswordChar = true;
-            // 
             // Pierakstisanas_poga
             // 
             this.Pierakstisanas_poga.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(147)))), ((int)(((byte)(192)))), ((int)(((byte)(164)))));
             this.Pierakstisanas_poga.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Pierakstisanas_poga.Font = new System.Drawing.Font("Yu Gothic UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Pierakstisanas_poga.Location = new System.Drawing.Point(112, 232);
+            this.Pierakstisanas_poga.Location = new System.Drawing.Point(112, 264);
             this.Pierakstisanas_poga.Name = "Pierakstisanas_poga";
             this.Pierakstisanas_poga.Size = new System.Drawing.Size(93, 39);
             this.Pierakstisanas_poga.TabIndex = 9;
             this.Pierakstisanas_poga.Text = "Pierakstities";
             this.Pierakstisanas_poga.UseVisualStyleBackColor = false;
-            this.Pierakstisanas_poga.Click += new System.EventHandler(this.button1_Click);
+            this.Pierakstisanas_poga.Click += new System.EventHandler(this.Pierakstities_click);
             // 
             // label2
             // 
@@ -116,18 +109,39 @@
             // 
             // Radit_tekstu
             // 
-            this.Radit_tekstu.BackgroundImage = global::Projekta_darbs_Rihards_frizetava.Properties.Resources.rsz_lupa;
             this.Radit_tekstu.Location = new System.Drawing.Point(244, 206);
             this.Radit_tekstu.Name = "Radit_tekstu";
-            this.Radit_tekstu.Size = new System.Drawing.Size(20, 23);
+            this.Radit_tekstu.Size = new System.Drawing.Size(20, 20);
             this.Radit_tekstu.TabIndex = 14;
             this.Radit_tekstu.UseVisualStyleBackColor = true;
+            this.Radit_tekstu.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Radit_tekstu_MouseDown);
+            this.Radit_tekstu.MouseUp += new System.Windows.Forms.MouseEventHandler(this.Radit_tekstu_MouseUp);
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(168, 239);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(70, 13);
+            this.label5.TabIndex = 15;
+            this.label5.Text = "Notīrīt laukus";
+            this.label5.Click += new System.EventHandler(this.Notirit_laukus);
+            // 
+            // pierakstisanas_parole
+            // 
+            this.pierakstisanas_parole.Location = new System.Drawing.Point(83, 206);
+            this.pierakstisanas_parole.Name = "pierakstisanas_parole";
+            this.pierakstisanas_parole.Size = new System.Drawing.Size(155, 20);
+            this.pierakstisanas_parole.TabIndex = 16;
+            this.pierakstisanas_parole.UseSystemPasswordChar = true;
             // 
             // Pierakstisanas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(320, 450);
+            this.Controls.Add(this.pierakstisanas_parole);
+            this.Controls.Add(this.label5);
             this.Controls.Add(this.Radit_tekstu);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.Registresanas_parvietosana);
@@ -136,7 +150,6 @@
             this.Controls.Add(this.Pierakstisanas_poga);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.Pierakstisanas_e_pasts);
-            this.Controls.Add(this.Pierakstisanas_parole);
             this.Name = "Pierakstisanas";
             this.Text = "Pierakstisanas";
             this.Load += new System.EventHandler(this.Pierakstisanas_Load);
@@ -149,12 +162,13 @@
 
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.MaskedTextBox Pierakstisanas_e_pasts;
-        private System.Windows.Forms.TextBox Pierakstisanas_parole;
         private System.Windows.Forms.Button Pierakstisanas_poga;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button Registresanas_parvietosana;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Button Radit_tekstu;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.MaskedTextBox pierakstisanas_parole;
     }
 }

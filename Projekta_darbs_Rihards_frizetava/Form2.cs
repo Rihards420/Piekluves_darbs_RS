@@ -24,36 +24,45 @@ namespace Projekta_darbs_Rihards_frizetava
 
         }
 
-        private void button1_Click(object sender, EventArgs e)
-        {
-            Pierakstisanas_parole.Text = SHA256_HASH(Pierakstisanas_e_pasts.Text);
-        }
-
-        static string SHA256_HASH(string Parole)
-        {
-            // Create a SHA256
-            using (SHA256 sha256Hash = SHA256.Create())
-            {
-                // ComputeHash - returns byte array
-                byte[] bytes = sha256Hash.ComputeHash(Encoding.UTF8.GetBytes(Parole));
-
-                // Convert byte array to a string
-                StringBuilder builder = new StringBuilder();
-                for (int i = 0; i < bytes.Length; i++)
-                {
-                    builder.Append(bytes[i].ToString("x2"));
-                }
-                return builder.ToString();
-            }
-        }
 
         private void Registresanas_parvietosana_Click(object sender, EventArgs e)
         {
-            Pierakstisanas pie = new Pierakstisanas();
             Registresanas reg = new Registresanas();
             reg.Show();
-            pie.Close();
+            this.Hide();
           
+        }
+        private void Radit_tekstu_MouseDown(object sender, MouseEventArgs e)
+        {
+            if (e.Button == MouseButtons.Left)
+            {
+                pierakstisanas_parole.UseSystemPasswordChar = false;
+            }
+        }
+
+        private void Radit_tekstu_MouseUp(object sender, MouseEventArgs e)
+        {
+            if (e.Button == MouseButtons.Left)
+            {
+                pierakstisanas_parole.UseSystemPasswordChar = true;
+            }
+        }
+
+        private void Pierakstities_click(object sender, EventArgs e)
+        {
+            if(Datu_manipulesana.VaiTuksiLauki(Pierakstisanas_e_pasts, pierakstisanas_parole))
+            {
+               
+            }
+            else
+            {
+
+            }
+        }
+
+        private void Notirit_laukus(object sender, EventArgs e)
+        {
+            Datu_manipulesana.NotiritTekstu(Pierakstisanas_e_pasts, pierakstisanas_parole);
         }
     }
 
@@ -61,5 +70,8 @@ namespace Projekta_darbs_Rihards_frizetava
     {
         string e_pasts {get; set;}
         string parole  {get; set;}
+
+
+
     }
 }
