@@ -75,4 +75,6 @@ namespace Projekta_darbs_Rihards_frizetava
             loadform(new Galvenais_ekrans());
         }
     }
+
+    
 }

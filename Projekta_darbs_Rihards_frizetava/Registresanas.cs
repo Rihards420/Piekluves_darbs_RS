@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SQLite;
 using System.Diagnostics.Eventing.Reader;
 using System.Drawing;
 using System.Linq;
@@ -31,6 +32,13 @@ namespace Projekta_darbs_Rihards_frizetava
 
         private void Registresanas_poga_Click(object sender, EventArgs e)
         {
+            Registresanas_dati reg = new Registresanas_dati();
+            reg.Vards = Vards_TTB.Text;
+            reg.Uzvards = Uzvards_TTB.Text;
+            reg.Telefona_nr = Convert.ToInt32(Tel_nr_TTB.Text);
+            reg.E_pasts = E_pasts_TTB.Text;
+            reg.Parole = Parole_TTB.Text;
+
             if (!Datu_manipulesana.VaiTuksiLauki(Vards_TTB, Uzvards_TTB, E_pasts_TTB, Tel_nr_TTB, Parole_TTB))
             {
                 bridinajums_label.Visible = true;
@@ -39,11 +47,16 @@ namespace Projekta_darbs_Rihards_frizetava
             {
                 if (Datu_manipulesana.Varda_parbaude(Vards_TTB.Text))
                 {
-                    MessageBox.Show("True strada");
+
+                    reg.registrelietotaju();
+                    Form1 form1 = new Form1();
+                    form1.Show();
+                    this.Dispose();
+
                 }
                 else
                 {
-                    MessageBox.Show("False strada");
+                    
                 }
 
             }
@@ -67,6 +80,66 @@ namespace Projekta_darbs_Rihards_frizetava
         public string E_pasts { get; set; }
         public int Telefona_nr { get; set; }
         public string Parole { get; set; }
+
+        public void registrelietotaju()
+        {
+            // Open the connection within the method scope
+            using (SQLiteConnection connection = Konekcija())
+            {
+                try
+                {
+                    // Open the connection explicitly
+                    connection.Open();
+
+                    // Check if the connection is open
+                    if (connection.State == ConnectionState.Open)
+                    {
+                        // Execute the command
+                        string query = "INSERT INTO Klients (Vards, Uzvards, Telefona_numurs, E_pasts, Parole) " +
+                                       "VALUES (@Vards, @Uzvards, @Telefona_numurs, @E_pasts, @Parole)";
+
+                        using (SQLiteCommand command = new SQLiteCommand(query, connection))
+                        {
+                            // Set parameters
+                            command.Parameters.AddWithValue("@Vards", Vards);
+                            command.Parameters.AddWithValue("@Uzvards", Uzvards);
+                            command.Parameters.AddWithValue("@Telefona_numurs", Telefona_nr);
+                            command.Parameters.AddWithValue("@E_pasts", E_pasts);
+                            command.Parameters.AddWithValue("@Parole", Datu_manipulesana.SHA256_HASH(Parole));
+
+                            // Execute command
+                            command.ExecuteNonQuery();
+                            command.Parameters.Clear();
+                        }
+                    }
+                    else
+                    {
+                        MessageBox.Show("Savienojums netika izveidots");
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Kļūda: " + ex.Message);
+                }
+            }
+        }
+
+        // Move the connection method outside the class or refactor it to an instance method
+        private SQLiteConnection Konekcija()
+        {
+            SQLiteConnection sqlite_conn;
+            sqlite_conn = new SQLiteConnection(@"Data Source= ..\..\Faili\Frizetava_datubaze_SQLite.db; Version = 3;");
+            try
+            {
+                // Do not open the connection here
+            }
+            catch (Exception ex)
+            {
+                // Handle exception
+            }
+            return sqlite_conn;
+        }
+
     }
 
     static class Datu_manipulesana
