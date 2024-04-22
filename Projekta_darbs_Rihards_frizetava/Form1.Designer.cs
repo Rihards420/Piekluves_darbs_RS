@@ -28,167 +28,143 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.Vards_text = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.Uzvards_text = new System.Windows.Forms.TextBox();
-            this.Tel_numurs_text = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.Pierakstisanas_poga = new System.Windows.Forms.Button();
-            this.Izvele_list = new System.Windows.Forms.CheckedListBox();
-            this.Saraksta_poga = new System.Windows.Forms.Button();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.monthCalendar1 = new System.Windows.Forms.MonthCalendar();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.Sana_panelis = new System.Windows.Forms.Panel();
+            this.Galvenais_ekrans = new System.Windows.Forms.Button();
+            this.Pieteikumi_Pasutijumi = new System.Windows.Forms.Button();
+            this.Pieteikties = new System.Windows.Forms.Button();
+            this.Pasutit_preci = new System.Windows.Forms.Button();
+            this.augsas_panelis = new System.Windows.Forms.Panel();
+            this.Galvenais_panelis = new System.Windows.Forms.Panel();
+            this.Aizversanas_poga = new System.Windows.Forms.Button();
+            this.Sana_panelis.SuspendLayout();
+            this.augsas_panelis.SuspendLayout();
             this.SuspendLayout();
             // 
-            // Vards_text
+            // Sana_panelis
             // 
-            this.Vards_text.Location = new System.Drawing.Point(337, 58);
-            this.Vards_text.Name = "Vards_text";
-            this.Vards_text.Size = new System.Drawing.Size(100, 20);
-            this.Vards_text.TabIndex = 0;
+            this.Sana_panelis.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.Sana_panelis.Controls.Add(this.Galvenais_ekrans);
+            this.Sana_panelis.Controls.Add(this.Pieteikumi_Pasutijumi);
+            this.Sana_panelis.Controls.Add(this.Pieteikties);
+            this.Sana_panelis.Controls.Add(this.Pasutit_preci);
+            this.Sana_panelis.Dock = System.Windows.Forms.DockStyle.Left;
+            this.Sana_panelis.Location = new System.Drawing.Point(0, 30);
+            this.Sana_panelis.Name = "Sana_panelis";
+            this.Sana_panelis.Size = new System.Drawing.Size(200, 420);
+            this.Sana_panelis.TabIndex = 0;
             // 
-            // label1
+            // Galvenais_ekrans
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(443, 61);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(34, 13);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "Vards";
+            this.Galvenais_ekrans.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+            this.Galvenais_ekrans.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Galvenais_ekrans.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Galvenais_ekrans.Location = new System.Drawing.Point(0, 149);
+            this.Galvenais_ekrans.Name = "Galvenais_ekrans";
+            this.Galvenais_ekrans.Size = new System.Drawing.Size(200, 30);
+            this.Galvenais_ekrans.TabIndex = 1;
+            this.Galvenais_ekrans.Text = "Galvenais ekrāns";
+            this.Galvenais_ekrans.UseVisualStyleBackColor = false;
+            this.Galvenais_ekrans.Click += new System.EventHandler(this.Galvenais_ekrans_Click);
             // 
-            // Uzvards_text
+            // Pieteikumi_Pasutijumi
             // 
-            this.Uzvards_text.Location = new System.Drawing.Point(337, 84);
-            this.Uzvards_text.Name = "Uzvards_text";
-            this.Uzvards_text.Size = new System.Drawing.Size(100, 20);
-            this.Uzvards_text.TabIndex = 2;
+            this.Pieteikumi_Pasutijumi.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+            this.Pieteikumi_Pasutijumi.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Pieteikumi_Pasutijumi.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Pieteikumi_Pasutijumi.Location = new System.Drawing.Point(0, 257);
+            this.Pieteikumi_Pasutijumi.Name = "Pieteikumi_Pasutijumi";
+            this.Pieteikumi_Pasutijumi.Size = new System.Drawing.Size(200, 30);
+            this.Pieteikumi_Pasutijumi.TabIndex = 2;
+            this.Pieteikumi_Pasutijumi.Text = "Mani pieteikumi/Pasūtijumi";
+            this.Pieteikumi_Pasutijumi.UseVisualStyleBackColor = false;
+            this.Pieteikumi_Pasutijumi.Click += new System.EventHandler(this.Pieteikumi_Pasutijumi_Click);
             // 
-            // Tel_numurs_text
+            // Pieteikties
             // 
-            this.Tel_numurs_text.Location = new System.Drawing.Point(337, 110);
-            this.Tel_numurs_text.Name = "Tel_numurs_text";
-            this.Tel_numurs_text.Size = new System.Drawing.Size(100, 20);
-            this.Tel_numurs_text.TabIndex = 3;
+            this.Pieteikties.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+            this.Pieteikties.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Pieteikties.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Pieteikties.Location = new System.Drawing.Point(0, 185);
+            this.Pieteikties.Name = "Pieteikties";
+            this.Pieteikties.Size = new System.Drawing.Size(200, 30);
+            this.Pieteikties.TabIndex = 2;
+            this.Pieteikties.Text = "Pieteikties";
+            this.Pieteikties.UseVisualStyleBackColor = false;
+            this.Pieteikties.Click += new System.EventHandler(this.Pieteikties_Click);
             // 
-            // label2
+            // Pasutit_preci
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(443, 91);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(46, 13);
-            this.label2.TabIndex = 4;
-            this.label2.Text = "Uzvards";
+            this.Pasutit_preci.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+            this.Pasutit_preci.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Pasutit_preci.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Pasutit_preci.Location = new System.Drawing.Point(0, 221);
+            this.Pasutit_preci.Name = "Pasutit_preci";
+            this.Pasutit_preci.Size = new System.Drawing.Size(200, 30);
+            this.Pasutit_preci.TabIndex = 2;
+            this.Pasutit_preci.Text = "Pasūtīt preci";
+            this.Pasutit_preci.UseVisualStyleBackColor = false;
+            this.Pasutit_preci.Click += new System.EventHandler(this.Pasutit_preci_Click);
             // 
-            // label3
+            // augsas_panelis
             // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(443, 117);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(64, 13);
-            this.label3.TabIndex = 5;
-            this.label3.Text = "Telefona_nr";
+            this.augsas_panelis.BackColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.augsas_panelis.Controls.Add(this.Aizversanas_poga);
+            this.augsas_panelis.Dock = System.Windows.Forms.DockStyle.Top;
+            this.augsas_panelis.Location = new System.Drawing.Point(0, 0);
+            this.augsas_panelis.Name = "augsas_panelis";
+            this.augsas_panelis.Size = new System.Drawing.Size(800, 30);
+            this.augsas_panelis.TabIndex = 4;
+            this.augsas_panelis.Paint += new System.Windows.Forms.PaintEventHandler(this.augsas_panelis_Paint);
             // 
-            // label4
+            // Galvenais_panelis
             // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 30F);
-            this.label4.Location = new System.Drawing.Point(307, 9);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(182, 46);
-            this.label4.TabIndex = 6;
-            this.label4.Text = "Frizetava";
+            this.Galvenais_panelis.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.Galvenais_panelis.Location = new System.Drawing.Point(200, 30);
+            this.Galvenais_panelis.Name = "Galvenais_panelis";
+            this.Galvenais_panelis.Size = new System.Drawing.Size(600, 420);
+            this.Galvenais_panelis.TabIndex = 0;
             // 
-            // Pierakstisanas_poga
+            // Aizversanas_poga
             // 
-            this.Pierakstisanas_poga.Location = new System.Drawing.Point(337, 136);
-            this.Pierakstisanas_poga.Name = "Pierakstisanas_poga";
-            this.Pierakstisanas_poga.Size = new System.Drawing.Size(100, 23);
-            this.Pierakstisanas_poga.TabIndex = 7;
-            this.Pierakstisanas_poga.Text = "Pierakstities";
-            this.Pierakstisanas_poga.UseVisualStyleBackColor = true;
-            this.Pierakstisanas_poga.Click += new System.EventHandler(this.Pierakstisanas_poga_Click);
-            // 
-            // Izvele_list
-            // 
-            this.Izvele_list.FormattingEnabled = true;
-            this.Izvele_list.Items.AddRange(new object[] {
-            "Matu mazgasana",
-            "Matu griezsana",
-            "Matu krasosana",
-            "Bardas skusana"});
-            this.Izvele_list.Location = new System.Drawing.Point(211, 58);
-            this.Izvele_list.Name = "Izvele_list";
-            this.Izvele_list.Size = new System.Drawing.Size(120, 94);
-            this.Izvele_list.TabIndex = 8;
-            // 
-            // Saraksta_poga
-            // 
-            this.Saraksta_poga.Location = new System.Drawing.Point(337, 383);
-            this.Saraksta_poga.Name = "Saraksta_poga";
-            this.Saraksta_poga.Size = new System.Drawing.Size(100, 23);
-            this.Saraksta_poga.TabIndex = 9;
-            this.Saraksta_poga.Text = "Saraksts";
-            this.Saraksta_poga.UseVisualStyleBackColor = true;
-            this.Saraksta_poga.Click += new System.EventHandler(this.Saraksta_poga_Click);
-            // 
-            // dataGridView1
-            // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(12, 227);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(776, 150);
-            this.dataGridView1.TabIndex = 10;
-            // 
-            // monthCalendar1
-            // 
-            this.monthCalendar1.Location = new System.Drawing.Point(519, 58);
-            this.monthCalendar1.MaxSelectionCount = 1;
-            this.monthCalendar1.Name = "monthCalendar1";
-            this.monthCalendar1.TabIndex = 11;
+            this.Aizversanas_poga.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+            this.Aizversanas_poga.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Aizversanas_poga.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Aizversanas_poga.Location = new System.Drawing.Point(770, 0);
+            this.Aizversanas_poga.Name = "Aizversanas_poga";
+            this.Aizversanas_poga.Size = new System.Drawing.Size(30, 30);
+            this.Aizversanas_poga.TabIndex = 2;
+            this.Aizversanas_poga.Text = "X";
+            this.Aizversanas_poga.UseVisualStyleBackColor = false;
+            this.Aizversanas_poga.Click += new System.EventHandler(this.Aizversanas_poga_Click);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.monthCalendar1);
-            this.Controls.Add(this.dataGridView1);
-            this.Controls.Add(this.Saraksta_poga);
-            this.Controls.Add(this.Izvele_list);
-            this.Controls.Add(this.Pierakstisanas_poga);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.Tel_numurs_text);
-            this.Controls.Add(this.Uzvards_text);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.Vards_text);
+            this.Controls.Add(this.Galvenais_panelis);
+            this.Controls.Add(this.Sana_panelis);
+            this.Controls.Add(this.augsas_panelis);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Form1";
-            this.Text = "Form1";
+            this.Text = " ";
             this.Load += new System.EventHandler(this.Form1_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.Sana_panelis.ResumeLayout(false);
+            this.augsas_panelis.ResumeLayout(false);
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
         #endregion
 
-        private System.Windows.Forms.TextBox Vards_text;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox Uzvards_text;
-        private System.Windows.Forms.TextBox Tel_numurs_text;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Button Pierakstisanas_poga;
-        private System.Windows.Forms.CheckedListBox Izvele_list;
-        private System.Windows.Forms.Button Saraksta_poga;
-        private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.MonthCalendar monthCalendar1;
+        private System.Windows.Forms.Panel Sana_panelis;
+        private System.Windows.Forms.Button Pieteikumi_Pasutijumi;
+        private System.Windows.Forms.Button Pasutit_preci;
+        private System.Windows.Forms.Button Pieteikties;
+        private System.Windows.Forms.Button Galvenais_ekrans;
+        private System.Windows.Forms.Panel augsas_panelis;
+        private System.Windows.Forms.Panel Galvenais_panelis;
+        private System.Windows.Forms.Button Aizversanas_poga;
     }
 }
 

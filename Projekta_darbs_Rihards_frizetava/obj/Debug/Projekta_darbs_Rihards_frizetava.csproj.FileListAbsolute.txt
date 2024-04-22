@@ -38,3 +38,15 @@ D:\Rihards\Documents\hw\RS_projekta_darbs\Piekluves_darbs_RS\Projekta_darbs_Riha
 D:\Rihards\Documents\hw\RS_projekta_darbs\Piekluves_darbs_RS\Projekta_darbs_Rihards_frizetava\obj\Debug\Projekta_darbs_Rihards_frizetava.Properties.Resources.resources
 D:\Rihards\Documents\hw\RS_projekta_darbs\Piekluves_darbs_RS\Projekta_darbs_Rihards_frizetava\obj\Debug\Projekta_darbs_Rihards_frizetava.csproj.CoreCompileInputs.cache
 D:\Rihards\Documents\hw\RS_projekta_darbs\Piekluves_darbs_RS\Projekta_darbs_Rihards_frizetava\obj\Debug\Projekta_darbs_Rihards_frizetava.csproj.CopyComplete
+D:\Rihards\Documents\hw\RS_projekta_darbs\Piekluves_darbs_RS\Projekta_darbs_Rihards_frizetava\bin\Debug\EntityFramework.dll
+D:\Rihards\Documents\hw\RS_projekta_darbs\Piekluves_darbs_RS\Projekta_darbs_Rihards_frizetava\bin\Debug\EntityFramework.SqlServer.dll
+D:\Rihards\Documents\hw\RS_projekta_darbs\Piekluves_darbs_RS\Projekta_darbs_Rihards_frizetava\bin\Debug\System.Data.SQLite.dll
+D:\Rihards\Documents\hw\RS_projekta_darbs\Piekluves_darbs_RS\Projekta_darbs_Rihards_frizetava\bin\Debug\System.Data.SQLite.EF6.dll
+D:\Rihards\Documents\hw\RS_projekta_darbs\Piekluves_darbs_RS\Projekta_darbs_Rihards_frizetava\bin\Debug\System.Data.SQLite.Linq.dll
+D:\Rihards\Documents\hw\RS_projekta_darbs\Piekluves_darbs_RS\Projekta_darbs_Rihards_frizetava\bin\Debug\EntityFramework.xml
+D:\Rihards\Documents\hw\RS_projekta_darbs\Piekluves_darbs_RS\Projekta_darbs_Rihards_frizetava\bin\Debug\EntityFramework.SqlServer.xml
+D:\Rihards\Documents\hw\RS_projekta_darbs\Piekluves_darbs_RS\Projekta_darbs_Rihards_frizetava\bin\Debug\System.Data.SQLite.xml
+D:\Rihards\Documents\hw\RS_projekta_darbs\Piekluves_darbs_RS\Projekta_darbs_Rihards_frizetava\obj\Debug\Projekta_darbs_Rihards_frizetava.Galvenais_ekrans.resources
+D:\Rihards\Documents\hw\RS_projekta_darbs\Piekluves_darbs_RS\Projekta_darbs_Rihards_frizetava\obj\Debug\Projekta_darbs_Rihards_frizetava.Mani_pasutijumi_pieteikumi.resources
+D:\Rihards\Documents\hw\RS_projekta_darbs\Piekluves_darbs_RS\Projekta_darbs_Rihards_frizetava\obj\Debug\Projekta_darbs_Rihards_frizetava.Pasutit_preci.resources
+D:\Rihards\Documents\hw\RS_projekta_darbs\Piekluves_darbs_RS\Projekta_darbs_Rihards_frizetava\obj\Debug\Projekta_darbs_Rihards_frizetava.Pieteikties.resources
