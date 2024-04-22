@@ -32,6 +32,7 @@ namespace Projekta_darbs_Rihards_frizetava
             this.Hide();
           
         }
+
         private void Radit_tekstu_MouseDown(object sender, MouseEventArgs e)
         {
             if (e.Button == MouseButtons.Left)
@@ -47,31 +48,24 @@ namespace Projekta_darbs_Rihards_frizetava
                 pierakstisanas_parole.UseSystemPasswordChar = true;
             }
         }
-
+        // Pieraksta lietotaju aplikacija
         private void Pierakstities_click(object sender, EventArgs e)
         {
             if(Datu_manipulesana.VaiTuksiLauki(Pierakstisanas_e_pasts, pierakstisanas_parole))
             {
-               
+                MessageBox.Show("wow");
             }
             else
             {
-
+                Form1 f = new Form1();
+                f.ShowDialog();
+                this.Close();
             }
         }
-
+        // Notira datus ievaditajos laukos
         private void Notirit_laukus(object sender, EventArgs e)
         {
             Datu_manipulesana.NotiritTekstu(Pierakstisanas_e_pasts, pierakstisanas_parole);
         }
-    }
-
-    public class Pierakstisanas_dati
-    {
-        string e_pasts {get; set;}
-        string parole  {get; set;}
-
-
-
     }
 }

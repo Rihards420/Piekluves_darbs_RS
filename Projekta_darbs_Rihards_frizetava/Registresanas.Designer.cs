@@ -43,6 +43,7 @@
             this.label6 = new System.Windows.Forms.Label();
             this.notirit_laukus = new System.Windows.Forms.Label();
             this.bridinajums_label = new System.Windows.Forms.Label();
+            this.Paradit_paroli = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // Vards_TTB
@@ -177,11 +178,22 @@
             this.bridinajums_label.Text = "Aizpildiet visus laukus!";
             this.bridinajums_label.Visible = false;
             // 
+            // Paradit_paroli
+            // 
+            this.Paradit_paroli.Location = new System.Drawing.Point(207, 264);
+            this.Paradit_paroli.Name = "Paradit_paroli";
+            this.Paradit_paroli.Size = new System.Drawing.Size(20, 20);
+            this.Paradit_paroli.TabIndex = 19;
+            this.Paradit_paroli.UseVisualStyleBackColor = true;
+            this.Paradit_paroli.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Paradit_paroli_MouseDown);
+            this.Paradit_paroli.MouseUp += new System.Windows.Forms.MouseEventHandler(this.Paradit_paroli_MouseUp);
+            // 
             // Registresanas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(310, 450);
+            this.Controls.Add(this.Paradit_paroli);
             this.Controls.Add(this.bridinajums_label);
             this.Controls.Add(this.notirit_laukus);
             this.Controls.Add(this.label6);
@@ -199,7 +211,7 @@
             this.Controls.Add(this.Vards_TTB);
             this.Name = "Registresanas";
             this.Text = "Registresanas";
-            this.Load += new System.EventHandler(this.Registresanas_Load);
+            this.Load += new System.EventHandler(this. Registresanas_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -221,5 +233,6 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label notirit_laukus;
         private System.Windows.Forms.Label bridinajums_label;
+        private System.Windows.Forms.Button Paradit_paroli;
     }
 }

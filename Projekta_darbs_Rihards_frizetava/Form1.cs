@@ -11,7 +11,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Windows.Forms.VisualStyles;
-using MySql.Data.MySqlClient;
+using System.Data.SQLite;
 
 namespace Projekta_darbs_Rihards_frizetava
 {
@@ -27,92 +27,52 @@ namespace Projekta_darbs_Rihards_frizetava
         {
 
         }
-        public bool Ievades_parbaude()
+        public void loadform(object Form)
         {
-            if (String.IsNullOrEmpty(Vards_text.Text))
-            {
-                MessageBox.Show("Ievadiet savu vardu!");
-                return false;
-            }
-            else if (String.IsNullOrEmpty(Uzvards_text.Text))
-            {
-                MessageBox.Show("Ievadiet savu uzvardu!");
-                return false;
-            }
-            else if (String.IsNullOrEmpty(Tel_numurs_text.Text))
-            {
-                MessageBox.Show("Ievadiet savu telefona numuru!");
-                return false;
-            }
-            else if (Izvele_list.SelectedIndex == -1)
-            {
-                MessageBox.Show("Izvelaties kadu no proceduram!");
-                return false;
-            }
-            else
-            {
-                return true;
-            }
+            if (this.Galvenais_panelis.Controls.Count > 0)
+                this.Galvenais_panelis.Controls.RemoveAt(0);
+            Form f = Form as Form;
+            f.TopLevel = false;
+            f.Dock = DockStyle.Fill;
+            this.Galvenais_panelis.Controls.Add(f);
+            this.Galvenais_panelis.Tag = f;
+            f.Show();
         }
 
 
-        public void SQL()
+        private void Pieteikumi_Pasutijumi_Click(object sender, EventArgs e)
         {
-            string ConnectString = "datasource =127.0.0.1 ; username = root ; password = ; database = frizetava_rihards";
-            MySqlConnection DBconnect = new MySqlConnection(ConnectString);
+            loadform(new Mani_pasutijumi_pieteikumi());
+        }
 
-            DBconnect.Open();
+        private void Pieteikties_Click(object sender, EventArgs e)
+        {
+            loadform(new Pieteikties());
+        }
 
-            string Query1 = "INSERT INTO klients (Klienta_ID, Vards, Uzvards, Telefona_numurs) VALUES ('" + "NULL" + "','" + this.Vards_text.Text + "','" + this.Uzvards_text.Text + "','" + this.Tel_numurs_text.Text + "')";
-            MySqlCommand cmd1 = new MySqlCommand(Query1, DBconnect);
+        private void Pasutit_preci_Click(object sender, EventArgs e)
+        {
+            loadform(new Pasutit_preci());
+        }
 
-            int i = cmd1.ExecuteNonQuery();
-
-            if (i != 0)
-            {
-                MessageBox.Show("Jus esat pierakstijusies!");
-            }
-            else
-            {
-                MessageBox.Show("oops, kaut kas nogaja greizi!");
-            }
-
-            DBconnect.Close();
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
 
         }
 
-        public void frizetavas_saraksts()
+        private void augsas_panelis_Paint(object sender, PaintEventArgs e)
         {
-            string ConnectString = "datasource =127.0.0.1 ; username = root ; password = ; database = frizetava_rihards";
-            MySqlConnection DBconnect = new MySqlConnection(ConnectString);
-            DBconnect.Open();
-
-            string query = "SELECT * FROM frizetava";
-            MySqlDataAdapter adapter = new MySqlDataAdapter(query, DBconnect);
-            DataTable table = new DataTable();
-            adapter.Fill(table);
-            dataGridView1.DataSource = table;
-
-            DBconnect.Close();
 
         }
 
-        private void Pierakstisanas_poga_Click(object sender, EventArgs e)
+        private void Aizversanas_poga_Click(object sender, EventArgs e)
         {
-         
-           if (Ievades_parbaude() == true)
-            {
-                SQL();
-            }
-            else
-            {
-
-            }
+            this.Dispose();
         }
 
-        private void Saraksta_poga_Click(object sender, EventArgs e)
+        private void Galvenais_ekrans_Click(object sender, EventArgs e)
         {
-            frizetavas_saraksts();
+            loadform(new Galvenais_ekrans());
         }
     }
 }
