@@ -34,8 +34,9 @@
             this.Pieteikties = new System.Windows.Forms.Button();
             this.Pasutit_preci = new System.Windows.Forms.Button();
             this.augsas_panelis = new System.Windows.Forms.Panel();
-            this.Galvenais_panelis = new System.Windows.Forms.Panel();
             this.Aizversanas_poga = new System.Windows.Forms.Button();
+            this.Galvenais_panelis = new System.Windows.Forms.Panel();
+            this.label1 = new System.Windows.Forms.Label();
             this.Sana_panelis.SuspendLayout();
             this.augsas_panelis.SuspendLayout();
             this.SuspendLayout();
@@ -108,6 +109,7 @@
             // augsas_panelis
             // 
             this.augsas_panelis.BackColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.augsas_panelis.Controls.Add(this.label1);
             this.augsas_panelis.Controls.Add(this.Aizversanas_poga);
             this.augsas_panelis.Dock = System.Windows.Forms.DockStyle.Top;
             this.augsas_panelis.Location = new System.Drawing.Point(0, 0);
@@ -115,14 +117,6 @@
             this.augsas_panelis.Size = new System.Drawing.Size(800, 30);
             this.augsas_panelis.TabIndex = 4;
             this.augsas_panelis.Paint += new System.Windows.Forms.PaintEventHandler(this.augsas_panelis_Paint);
-            // 
-            // Galvenais_panelis
-            // 
-            this.Galvenais_panelis.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.Galvenais_panelis.Location = new System.Drawing.Point(200, 30);
-            this.Galvenais_panelis.Name = "Galvenais_panelis";
-            this.Galvenais_panelis.Size = new System.Drawing.Size(600, 420);
-            this.Galvenais_panelis.TabIndex = 0;
             // 
             // Aizversanas_poga
             // 
@@ -136,6 +130,23 @@
             this.Aizversanas_poga.Text = "X";
             this.Aizversanas_poga.UseVisualStyleBackColor = false;
             this.Aizversanas_poga.Click += new System.EventHandler(this.Aizversanas_poga_Click);
+            // 
+            // Galvenais_panelis
+            // 
+            this.Galvenais_panelis.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.Galvenais_panelis.Location = new System.Drawing.Point(200, 30);
+            this.Galvenais_panelis.Name = "Galvenais_panelis";
+            this.Galvenais_panelis.Size = new System.Drawing.Size(600, 420);
+            this.Galvenais_panelis.TabIndex = 0;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(397, 9);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(35, 13);
+            this.label1.TabIndex = 3;
+            this.label1.Text = "label1";
             // 
             // Form1
             // 
@@ -151,6 +162,7 @@
             this.Load += new System.EventHandler(this.Form1_Load);
             this.Sana_panelis.ResumeLayout(false);
             this.augsas_panelis.ResumeLayout(false);
+            this.augsas_panelis.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -165,6 +177,7 @@
         private System.Windows.Forms.Panel augsas_panelis;
         private System.Windows.Forms.Panel Galvenais_panelis;
         private System.Windows.Forms.Button Aizversanas_poga;
+        private System.Windows.Forms.Label label1;
     }
 }
 

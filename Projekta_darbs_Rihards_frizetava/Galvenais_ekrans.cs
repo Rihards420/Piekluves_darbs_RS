@@ -16,5 +16,6 @@ namespace Projekta_darbs_Rihards_frizetava
         {
             InitializeComponent();
         }
+
     }
 }

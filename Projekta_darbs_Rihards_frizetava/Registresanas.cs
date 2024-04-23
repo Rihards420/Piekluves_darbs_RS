@@ -32,12 +32,7 @@ namespace Projekta_darbs_Rihards_frizetava
 
         private void Registresanas_poga_Click(object sender, EventArgs e)
         {
-            Registresanas_dati reg = new Registresanas_dati();
-            reg.Vards = Vards_TTB.Text;
-            reg.Uzvards = Uzvards_TTB.Text;
-            reg.Telefona_nr = Convert.ToInt32(Tel_nr_TTB.Text);
-            reg.E_pasts = E_pasts_TTB.Text;
-            reg.Parole = Parole_TTB.Text;
+
 
             if (!Datu_manipulesana.VaiTuksiLauki(Vards_TTB, Uzvards_TTB, E_pasts_TTB, Tel_nr_TTB, Parole_TTB))
             {
@@ -47,6 +42,12 @@ namespace Projekta_darbs_Rihards_frizetava
             {
                 if (Datu_manipulesana.Varda_parbaude(Vards_TTB.Text))
                 {
+                    Registresanas_dati reg = new Registresanas_dati();
+                    reg.Vards = Vards_TTB.Text;
+                    reg.Uzvards = Uzvards_TTB.Text;
+                    reg.Telefona_nr = Convert.ToInt32(Tel_nr_TTB.Text);
+                    reg.E_pasts = E_pasts_TTB.Text;
+                    reg.Parole = Parole_TTB.Text;
 
                     reg.registrelietotaju();
                     Form1 form1 = new Form1();
@@ -70,6 +71,18 @@ namespace Projekta_darbs_Rihards_frizetava
         private void Paradit_paroli_MouseUp(object sender, MouseEventArgs e)
         {
             Parole_TTB.UseSystemPasswordChar = true;
+        }
+
+        private void aiztaisit_programmu_Click(object sender, EventArgs e)
+        {
+            this.Dispose();
+        }
+
+        private void Atpakal_poga_Click(object sender, EventArgs e)
+        {
+            Pierakstisanas pie = new Pierakstisanas();
+            pie.Show();
+            this.Dispose();
         }
     }
 
@@ -110,6 +123,7 @@ namespace Projekta_darbs_Rihards_frizetava
                             // Execute command
                             command.ExecuteNonQuery();
                             command.Parameters.Clear();
+                            connection.Close();
                         }
                     }
                     else
@@ -125,7 +139,7 @@ namespace Projekta_darbs_Rihards_frizetava
         }
 
         // Move the connection method outside the class or refactor it to an instance method
-        private SQLiteConnection Konekcija()
+        public static SQLiteConnection Konekcija()
         {
             SQLiteConnection sqlite_conn;
             sqlite_conn = new SQLiteConnection(@"Data Source= ..\..\Faili\Frizetava_datubaze_SQLite.db; Version = 3;");
