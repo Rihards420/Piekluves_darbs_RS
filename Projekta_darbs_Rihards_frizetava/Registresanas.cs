@@ -40,6 +40,20 @@ namespace Projekta_darbs_Rihards_frizetava
             }
             else
             {
+                // Pārbaude, vai telefona numura laukā ir tikai cipari
+                if (!Datu_manipulesana.VaiTikaiCipari(Tel_nr_TTB.Text))
+                {
+                    MessageBox.Show("Telefona numurā atļauti tikai cipari!");
+                    return;
+                }
+
+                // Pārbaude, vai e-pasta laukā ir '@' simbols
+                if (!E_pasts_TTB.Text.Contains("@"))
+                {
+                    MessageBox.Show("Nederīgs e-pasta formāts!");
+                    return;
+                }
+
                 if (Datu_manipulesana.Varda_parbaude(Vards_TTB.Text))
                 {
                     Registresanas_dati reg = new Registresanas_dati();
@@ -53,11 +67,10 @@ namespace Projekta_darbs_Rihards_frizetava
                     Form1 form1 = new Form1();
                     form1.Show();
                     this.Dispose();
-
                 }
                 else
                 {
-                    
+
                 }
 
             }
@@ -214,6 +227,17 @@ namespace Projekta_darbs_Rihards_frizetava
                 
             }
             return parbaude;
+        }
+        public static bool VaiTikaiCipari(string teksts)
+        {
+            foreach (char c in teksts)
+            {
+                if (!char.IsDigit(c))
+                {
+                    return false;
+                }
+            }
+            return true;
         }
     }
 }

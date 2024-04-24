@@ -34,9 +34,9 @@
             this.Pieteikties = new System.Windows.Forms.Button();
             this.Pasutit_preci = new System.Windows.Forms.Button();
             this.augsas_panelis = new System.Windows.Forms.Panel();
+            this.label1 = new System.Windows.Forms.Label();
             this.Aizversanas_poga = new System.Windows.Forms.Button();
             this.Galvenais_panelis = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
             this.Sana_panelis.SuspendLayout();
             this.augsas_panelis.SuspendLayout();
             this.SuspendLayout();
@@ -116,7 +116,16 @@
             this.augsas_panelis.Name = "augsas_panelis";
             this.augsas_panelis.Size = new System.Drawing.Size(800, 30);
             this.augsas_panelis.TabIndex = 4;
-            this.augsas_panelis.Paint += new System.Windows.Forms.PaintEventHandler(this.augsas_panelis_Paint);
+        
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            this.label1.Location = new System.Drawing.Point(397, 9);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(0, 13);
+            this.label1.TabIndex = 3;
             // 
             // Aizversanas_poga
             // 
@@ -138,15 +147,6 @@
             this.Galvenais_panelis.Name = "Galvenais_panelis";
             this.Galvenais_panelis.Size = new System.Drawing.Size(600, 420);
             this.Galvenais_panelis.TabIndex = 0;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(397, 9);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(35, 13);
-            this.label1.TabIndex = 3;
-            this.label1.Text = "label1";
             // 
             // Form1
             // 

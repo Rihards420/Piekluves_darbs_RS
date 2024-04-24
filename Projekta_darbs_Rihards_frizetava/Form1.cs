@@ -3,7 +3,6 @@ using System.Collections;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
-using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
@@ -26,7 +25,7 @@ namespace Projekta_darbs_Rihards_frizetava
             InitializeComponent();
             client = new HttpClient();
             timer = new Timer();
-            timer.Interval = 1000; // Set interval to 1 second (1000 milliseconds)
+            timer.Interval = 1000; // Intervals 1 sekunde (1000 milisekundes)
             timer.Tick += Timer_Tick;
             timer.Start();
             this.StartPosition = FormStartPosition.CenterScreen;
@@ -66,16 +65,6 @@ namespace Projekta_darbs_Rihards_frizetava
         private void Pasutit_preci_Click(object sender, EventArgs e)
         {
             loadform(new Pasutit_preci());
-        }
-
-        private void panel1_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void augsas_panelis_Paint(object sender, PaintEventArgs e)
-        {
-
         }
 
         private void Aizversanas_poga_Click(object sender, EventArgs e)
