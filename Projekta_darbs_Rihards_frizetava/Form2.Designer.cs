@@ -59,9 +59,10 @@
             // 
             // Pierakstisanas_poga
             // 
-            this.Pierakstisanas_poga.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(147)))), ((int)(((byte)(192)))), ((int)(((byte)(164)))));
+            this.Pierakstisanas_poga.BackColor = System.Drawing.Color.White;
             this.Pierakstisanas_poga.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Pierakstisanas_poga.Font = new System.Drawing.Font("Yu Gothic UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Pierakstisanas_poga.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
             this.Pierakstisanas_poga.Location = new System.Drawing.Point(127, 244);
             this.Pierakstisanas_poga.Name = "Pierakstisanas_poga";
             this.Pierakstisanas_poga.Size = new System.Drawing.Size(93, 39);
@@ -90,12 +91,14 @@
             // 
             // Registresanas_parvietosana
             // 
+            this.Registresanas_parvietosana.BackColor = System.Drawing.Color.White;
+            this.Registresanas_parvietosana.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
             this.Registresanas_parvietosana.Location = new System.Drawing.Point(138, 325);
             this.Registresanas_parvietosana.Name = "Registresanas_parvietosana";
             this.Registresanas_parvietosana.Size = new System.Drawing.Size(75, 23);
             this.Registresanas_parvietosana.TabIndex = 12;
             this.Registresanas_parvietosana.Text = "Reģistrēties";
-            this.Registresanas_parvietosana.UseVisualStyleBackColor = true;
+            this.Registresanas_parvietosana.UseVisualStyleBackColor = false;
             this.Registresanas_parvietosana.Click += new System.EventHandler(this.Registresanas_parvietosana_Click);
             // 
             // label4
@@ -153,6 +156,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(115)))), ((int)(((byte)(93)))), ((int)(((byte)(120)))));
             this.ClientSize = new System.Drawing.Size(350, 450);
             this.Controls.Add(this.aiztaisit_programmu);
             this.Controls.Add(this.pierakstisanas_parole);
@@ -165,6 +169,7 @@
             this.Controls.Add(this.Pierakstisanas_poga);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.Pierakstisanas_e_pasts);
+            this.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(194)))), ((int)(((byte)(202)))));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Pierakstisanas";
             this.Text = "Pierakstisanas";
