@@ -23,6 +23,7 @@ namespace Projekta_darbs_Rihards_frizetava
         public Form1()
         {
             InitializeComponent();
+            loadform(new Galvenais_ekrans());
             client = new HttpClient();
             timer = new Timer();
             timer.Interval = 1000; // Intervals 1 sekunde (1000 milisekundes)

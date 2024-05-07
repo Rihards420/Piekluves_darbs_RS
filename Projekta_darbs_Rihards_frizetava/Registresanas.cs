@@ -64,8 +64,8 @@ namespace Projekta_darbs_Rihards_frizetava
                     reg.Parole = Parole_TTB.Text;
 
                     reg.registrelietotaju();
-                    Form1 form1 = new Form1();
-                    form1.Show();
+                    Pierakstisanas pie = new Pierakstisanas();
+                    pie.Show();
                     this.Dispose();
                 }
                 else
@@ -151,18 +151,18 @@ namespace Projekta_darbs_Rihards_frizetava
             }
         }
 
-        // Move the connection method outside the class or refactor it to an instance method
+
         public static SQLiteConnection Konekcija()
         {
             SQLiteConnection sqlite_conn;
             sqlite_conn = new SQLiteConnection(@"Data Source= ..\..\Faili\Frizetava_datubaze_SQLite.db; Version = 3;");
             try
             {
-                // Do not open the connection here
+                
             }
             catch (Exception ex)
             {
-                // Handle exception
+                MessageBox.Show("Kļūda" + ex.Message);
             }
             return sqlite_conn;
         }

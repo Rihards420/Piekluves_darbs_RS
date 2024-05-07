@@ -61,7 +61,7 @@
             this.label1.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(186)));
             this.label1.Location = new System.Drawing.Point(123, 89);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(46, 16);
+            this.label1.Size = new System.Drawing.Size(45, 16);
             this.label1.TabIndex = 5;
             this.label1.Text = "Vārds";
             // 
@@ -71,7 +71,7 @@
             this.label2.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold);
             this.label2.Location = new System.Drawing.Point(123, 130);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(58, 16);
+            this.label2.Size = new System.Drawing.Size(57, 16);
             this.label2.TabIndex = 7;
             this.label2.Text = "Uzvārds";
             // 
@@ -88,7 +88,7 @@
             this.label3.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold);
             this.label3.Location = new System.Drawing.Point(127, 172);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(54, 16);
+            this.label3.Size = new System.Drawing.Size(53, 16);
             this.label3.TabIndex = 9;
             this.label3.Text = "E-pasts";
             // 
@@ -105,7 +105,7 @@
             this.label4.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold);
             this.label4.Location = new System.Drawing.Point(123, 216);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(114, 16);
+            this.label4.Size = new System.Drawing.Size(113, 16);
             this.label4.TabIndex = 11;
             this.label4.Text = "Telefona numurs";
             // 
@@ -122,7 +122,7 @@
             this.label5.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold);
             this.label5.Location = new System.Drawing.Point(127, 259);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(49, 16);
+            this.label5.Size = new System.Drawing.Size(48, 16);
             this.label5.TabIndex = 13;
             this.label5.Text = "Parole";
             // 
@@ -229,6 +229,7 @@
             // 
             // Registresanas
             // 
+            this.AcceptButton = this.Registresanas_poga;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(115)))), ((int)(((byte)(93)))), ((int)(((byte)(120)))));
