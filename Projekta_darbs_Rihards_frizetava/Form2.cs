@@ -55,7 +55,8 @@ namespace Projekta_darbs_Rihards_frizetava
             {
                 if(IsValidUser(Pierakstisanas_e_pasts.Text, pierakstisanas_parole.Text))
                 {
-                    MessageBox.Show("Ielogjies");
+                   KlientaInfo.Klienta_ID = KlientaInfo.IegutKlientaID(Pierakstisanas_e_pasts.Text, pierakstisanas_parole.Text);
+                    MessageBox.Show(Convert.ToString(KlientaInfo.Klienta_ID));
                     Form1 f = new Form1();
                     f.Show();
                     this.Hide();
@@ -125,6 +126,47 @@ namespace Projekta_darbs_Rihards_frizetava
         private void aiztaisit_programmu_Click(object sender, EventArgs e)
         {
             this.Dispose();
+        }
+
+    }
+
+    public static class KlientaInfo
+    {
+        public static int Klienta_ID { get; set; }
+        public static int IegutKlientaID(string E_pasts, string Parole)
+        {
+            int clientId = -1;
+
+
+            string query = "SELECT Klients_ID FROM Klients WHERE E_pasts = @Epasts AND Parole = @Parole";
+
+            using (SQLiteConnection connection = Registresanas_dati.Konekcija())
+            {
+                try
+                {
+                    connection.Open();
+
+                    using (SQLiteCommand command = new SQLiteCommand(query, connection))
+                    {
+
+                        command.Parameters.AddWithValue("@Epasts", E_pasts);
+                        command.Parameters.AddWithValue("@Parole", Datu_manipulesana.SHA256_HASH(Parole));
+
+                        object result = command.ExecuteScalar();
+
+                        if (result != null)
+                        {
+                            clientId = Convert.ToInt32(result);
+                        }
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Error: " + ex.Message);
+                }
+            }
+
+            return clientId;
         }
     }
 }
